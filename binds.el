@@ -20,4 +20,7 @@
 (global-set-key (kbd "C-s") 'isearch-backward)
 (define-key isearch-mode-map (kbd "C-f") 'isearch-repeat-forward)
 (define-key isearch-mode-map (kbd "C-s") 'isearch-repeat-backward)
-
+;; file operations
+(global-set-key (kbd "C-m") 'open-file)
+;; miscellaneous
+(global-set-key (kbd "C-n") 'keyboard-quit)
