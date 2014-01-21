@@ -14,13 +14,14 @@
 ;; kill / yank
 (global-set-key (kbd "C-r") 'backward-kill-word)
 ;; screen movement
-(global-set-key (kbd "C-'") 'other-window)
+(global-set-key (kbd "C-p") 'other-window)
 ;; search
 (global-set-key (kbd "C-f") 'isearch-forward)
 (global-set-key (kbd "C-s") 'isearch-backward)
 (define-key isearch-mode-map (kbd "C-f") 'isearch-repeat-forward)
 (define-key isearch-mode-map (kbd "C-s") 'isearch-repeat-backward)
-;; file operations
-(global-set-key (kbd "C-m") 'open-file)
+;; file/buffer operations
+;;(global-set-key (kbd "C-p") 'find-file)
+(global-set-key (kbd "C-b") 'switch-to-buffer)
 ;; miscellaneous
 (global-set-key (kbd "C-n") 'keyboard-quit)
