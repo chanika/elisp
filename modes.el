@@ -55,3 +55,12 @@
 (defun my-cedet-hook ()
   (add-to-list 'ac-sources 'ac-source-semantic))
 (add-hook 'c-mode-common-hook 'my-cedet-hook)
+
+
+;;; Web development
+
+(require 'js2-mode)
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.css\\'" . web-mode))
