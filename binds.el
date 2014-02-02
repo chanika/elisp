@@ -24,7 +24,11 @@
 ;;(global-set-key (kbd "C-p") 'find-file)
 (global-set-key (kbd "C-b") 'switch-to-buffer)
 ;; web-mode
-(add-hook 'web-mode-hook '(lambda ()
-  (local-set-key (kbd "\C-c\C-v") 'browse-url-of-buffer)))
+(defun my-web-mode-key-bindings ()
+    (local-set-key (kbd "\C-c\C-v") 'browse-url-of-buffer)
+    (local-set-key (kbd "RET") 'newline-and-indent)
+    (local-unset-key (kbd "\C-c\C-m"))
+    (local-set-key (kbd "\C-c\C-e") 'web-mode-mark-and-expand))
+(add-hook 'web-mode-hook 'my-web-mode-key-bindings)
 ;; miscellaneous
 (global-set-key (kbd "C-n") 'keyboard-quit)
