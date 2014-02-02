@@ -23,5 +23,8 @@
 ;; file/buffer operations
 ;;(global-set-key (kbd "C-p") 'find-file)
 (global-set-key (kbd "C-b") 'switch-to-buffer)
+;; web-mode
+(add-hook 'web-mode-hook '(lambda ()
+  (local-set-key (kbd "\C-c\C-v") 'browse-url-of-buffer)))
 ;; miscellaneous
 (global-set-key (kbd "C-n") 'keyboard-quit)
