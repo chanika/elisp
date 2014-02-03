@@ -32,3 +32,5 @@
 (add-hook 'web-mode-hook 'my-web-mode-key-bindings)
 ;; miscellaneous
 (global-set-key (kbd "C-n") 'keyboard-quit)
+(global-unset-key (kbd "\C-x\C-c"))
+(global-set-key (kbd "\C-x\C-k") 'save-buffers-kill-terminal)
