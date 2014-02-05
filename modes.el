@@ -68,3 +68,7 @@
 ;; SVN
 
 (require 'dsvn)
+
+;; EDiff
+
+(setq ediff-window-setup-function 'ediff-setup-windows-plain)
