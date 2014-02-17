@@ -1,5 +1,7 @@
 (global-set-key (kbd "<f8>") 'shell)
 (global-set-key (kbd "<f7>") 'magit-status)
+(global-set-key (kbd "<f9>") 'format-buffer)
+(global-set-key (kbd "RET") 'newline-and-indent)
 ;; invoke meta-x 
 (global-set-key "\C-x\C-m" 'execute-extended-command)
 (global-set-key "\C-c\C-m" 'execute-extended-command)
@@ -30,6 +32,10 @@
     (local-unset-key (kbd "\C-c\C-m"))
     (local-set-key (kbd "\C-c\C-e") 'web-mode-mark-and-expand))
 (add-hook 'web-mode-hook 'my-web-mode-key-bindings)
+;; js2-mode
+(defun my-js2-key-bindings ()
+    (local-unset-key (kbd "M-j")))
+(add-hook 'js2-mode-hook 'my-js2-key-bindings)
 ;; miscellaneous
 (global-set-key (kbd "C-n") 'keyboard-quit)
 (global-unset-key (kbd "\C-x\C-c"))
