@@ -21,7 +21,7 @@
 ;;CEDET
 
 (add-to-list 'semantic-default-submodes 'global-semanticdb-minor-mode)
-(add-to-list 'semantic-default-submodes 'global-cedet-m3-minor-mode)
+;;(add-to-list 'semantic-default-submodes 'global-cedet-m3-minor-mode)
 (add-to-list 'semantic-default-submodes 'global-semantic-mru-bookmark-mode)
 (add-to-list 'semantic-default-submodes 'global-semantic-idle-local-symbol-highlight-mode)
 (add-to-list 'semantic-default-submodes 'global-semantic-idle-scheduler-mode)
@@ -64,6 +64,7 @@
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.css\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
 
 (setq web-mode-enable-current-element-highlight t)
 
