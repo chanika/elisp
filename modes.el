@@ -1,3 +1,7 @@
+;; all modes
+
+(setq-default indent-tabs-mode nil)
+
 ;; c++-mode
 ;; set indentation style
 (defun my-cc-style()
