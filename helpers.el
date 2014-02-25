@@ -1,4 +1,7 @@
 (defun format-buffer ()
+    "Indent buffer, fix whitespace"
     (interactive)
-    (delete-trailing-whitespace)
-    (indent-region (point-min) (point-max) nil))
+    (save-excursion
+        (delete-trailing-whitespace)
+        (indent-region (point-min) (point-max) nil)
+        (untabify (point-min) (point-max))))
