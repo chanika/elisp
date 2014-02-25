@@ -13,8 +13,8 @@
 (global-set-key (kbd "M-k") 'next-line)
 (global-set-key (kbd "M-j") 'backward-char)
 (global-set-key (kbd "M-l") 'forward-char)
-(global-set-key (kbd "C-S-j") 'backward-word)
-(global-set-key (kbd "C-S-l") 'forward-word)
+(global-set-key (kbd "C-M-j") 'backward-word)
+(global-set-key (kbd "C-M-l") 'forward-word)
 ;; kill / yank
 (global-set-key (kbd "C-r") 'backward-kill-word)
 ;; screen movement
