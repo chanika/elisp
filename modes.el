@@ -80,3 +80,11 @@
 ;; EDiff
 
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
+
+;; nxml-mode
+
+(defun my-nxml-mode-hook()
+  (setq nxml-slash-auto-complete-flag t)
+  (setq nxml-child-indent 4)
+  (local-unset-key (kbd "\C-c\C-m")))
+(add-hook 'nxml-mode-hook 'my-nxml-mode-hook)
