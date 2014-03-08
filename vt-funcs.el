@@ -2,13 +2,15 @@
 
 (defun mvt ()
   (interactive)
-  (compile "cd ~/git/virtutrace/build/ && make -j7 && cd -"))
+  (compile "cd ~/git/virtutrace/build/ && make -j7"))
 
 (defun rvt ()
   (interactive)
   (setq currentBuff (buffer-name))
   (switch-to-buffer-other-window (shell "vt-out-shell"))
   (point-max)
+  (comint-send-input)
+  (insert "cd ~/git/virtutrace/build/")
   (comint-send-input)
   (insert "~/git/virtutrace/build/virtutrace/virtutrace $VTDATA/conf/virtutrace-standalone.xml")
   (comint-send-input)
