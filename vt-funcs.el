@@ -2,7 +2,7 @@
 
 (defun mvt ()
   (interactive)
-  (compile "cd ~/git/virtutrace/build/ && make -j7 && cd -"))
+  (compile "cd ~/git/virtutrace/build/ && make -j7"))
 
 (defun rvt ()
   (interactive)
