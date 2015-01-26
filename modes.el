@@ -2,9 +2,19 @@
 
 (setq-default indent-tabs-mode nil)
 
+
+;; c-mode
+(defun my-c-style()
+    (c-set-style "linux")
+    (setq c-basic-offset 4)
+    (setq indent-tabs-mode nil)
+    (setq tab-width 4))
+
+(add-hook 'c-mode-hook 'my-c-style)
+
 ;; c++-mode
 ;; set indentation style
-(defun my-cc-style()
+(defun my-c++-style()
     (c-set-style "linux")
     (c-set-offset 'innamespace '0)
     (c-set-offset 'inextern-lang '0)
@@ -15,10 +25,9 @@
     (c-set-offset 'case-label '*)
     (setq c-basic-offset 4)
     (setq tab-width 4)
-    (setq indent-tabs-mode nil)
-)
+    (setq indent-tabs-mode nil))
 
-(add-hook 'c++-mode-hook 'my-cc-style)
+(add-hook 'c++-mode-hook 'my-c++-style)
 
 ;; .h files open in c++-mode
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
