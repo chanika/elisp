@@ -12,11 +12,12 @@
 ;; Start emacs maximized
 (defun toggle-fullscreen ()
   (interactive)
-  (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
+  (if (eq system-type 'gnu/linux)
+  ((x-send-client-message nil 0 nil "_NET_WM_STATE" 32
 	    		 '(2 "_NET_WM_STATE_MAXIMIZED_VERT" 0))
   (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
-	    		 '(2 "_NET_WM_STATE_MAXIMIZED_HORZ" 0))
-)
+	    		 '(2 "_NET_WM_STATE_MAXIMIZED_HORZ" 0)))
+  (w32-send-sys-command 61488)))
 (toggle-fullscreen)
 
 ;; show column numbers
