@@ -47,7 +47,7 @@
 
 (use-package semantic
     :ensure t)
-(semantic-mode 1)
+;;(semantic-mode 1)
 
 ;; ;; Imenu integration
 (defun my-semantic-hook ()
@@ -58,19 +58,19 @@
 (defun my-c-mode-cedet-hook ()
  (local-set-key "." 'semantic-complete-self-insert)
  (local-set-key ">" 'semantic-complete-self-insert))
-(add-hook 'c-mode-common-hook 'my-c-mode-cedet-hook)
+;;(add-hook 'c-mode-common-hook 'my-c-mode-cedet-hook)
 
 ;;;; Semantic and auto-config integratio
 (add-to-list 'load-path "~/.emacs.d/elpa/auto-complete-20131128.233/")    ; This may not be appeared if you have already added.
 (use-package auto-complete
     :ensure t)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
-(ac-config-default)
-(define-key ac-mode-map [(meta return)] 'auto-complete)
+;;(ac-config-default)
+;;(define-key ac-mode-map [(meta return)] 'auto-complete)
 
 (defun my-cedet-hook ()
   (add-to-list 'ac-sources 'ac-source-semantic))
-(add-hook 'c-mode-common-hook 'my-cedet-hook)
+;;(add-hook 'c-mode-common-hook 'my-cedet-hook)
 
 ;; web-mode
 
