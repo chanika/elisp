@@ -1,6 +1,7 @@
 (global-set-key (kbd "<f8>") 'shell)
 (global-set-key (kbd "<f7>") 'magit-status)
 (global-set-key (kbd "<f9>") 'format-buffer)
+(global-set-key (kbd "<f10>") 'default-compile)
 (global-set-key (kbd "RET") 'newline-and-indent)
 ;; invoke meta-x 
 (global-set-key "\C-x\C-m" 'execute-extended-command)
