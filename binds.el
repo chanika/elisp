@@ -18,6 +18,7 @@
 (global-set-key (kbd "C-M-l") 'forward-word)
 ;; kill / yank
 (global-set-key (kbd "C-r") 'backward-kill-word)
+(global-set-key (kbd "C-M-k") 'kill-whole-line)
 ;; screen movement
 (global-set-key (kbd "C-p") 'other-window)
 ;; search
