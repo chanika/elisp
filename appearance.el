@@ -20,3 +20,6 @@
 
 ;; show column numbers
 (column-number-mode)
+
+;; fonts
+(set-frame-font "Consolas 13")
