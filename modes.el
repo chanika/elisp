@@ -104,6 +104,11 @@
   (local-unset-key (kbd "\C-c\C-m")))
 (add-hook 'nxml-mode-hook 'my-nxml-mode-hook)
 
+;; json mode
+(defun my-javascript-mode-hook()
+  (setq js-indent-level 2))
+(add-hook 'javascript-mode-hook 'my-javascript-mode-hook)
+
 
 (autoload 'csharp-mode "csharp-mode" "Major mode for editing C# code." t)
   (setq auto-mode-alist
